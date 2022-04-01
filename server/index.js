@@ -6,6 +6,10 @@ const PORT = process.env.PORT || 3001
 const app = express()
 const ctrl = require('./controller')
 
+app.get('/',function(req,res) {
+    res.sendFile(path.join(__dirname, '../index.html'));
+  });
+
 
 
 app.use(cors())
